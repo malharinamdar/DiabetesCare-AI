@@ -1,3 +1,7 @@
 We are referring various available research papers present across internet to build a 
-machine learning system that can detect the presence of diabetes in patients and assist
-in case of positive detection
+machine learning system that can detect the presence of diabetes in patients and
+provide personal assistance in case of positive detection
+
+
+The general parameters for diabetes prediction include BMI, glucose, age, insulin
+
