@@ -1,1 +1,1 @@
-# TechRush-2024
+# Diabetes prediction using machine learning
