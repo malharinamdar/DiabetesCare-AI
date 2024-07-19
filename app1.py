@@ -12,7 +12,7 @@ from sklearn.model_selection import train_test_split
 import seaborn as sns
 
 # Load the trained model
-update_model = pickle.load(open('/Users/malhar.inamdar/Downloads/good_model.pkl', 'rb')) 
+update_model = pickle.load(open('/content/good_model.pkl', 'rb')) 
 
 # Load the dataset
 df = pd.read_csv('/Users/malhar.inamdar/Desktop/streamlitapp/diabetes_prediction_dataset.csv')
