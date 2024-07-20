@@ -16,6 +16,9 @@ high blood glucose.
 
 After analysing a couple of research papers of IEEE, it resulted in deciding the following 8 parameters as our 
 inputs upon which the ml model would predict the presence of diabetes in the patients:
+
+<a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
+
 1. gender (male or female)
 2. age
 3. hypertension
@@ -24,4 +27,4 @@ inputs upon which the ml model would predict the presence of diabetes in the pat
 6. haemoglobin level
 7. bmi
 8. glucose
-<a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
+
