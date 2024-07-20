@@ -3,5 +3,8 @@ machine learning system that can detect the presence of diabetes in patients and
 provide personal assistance in case of positive detection
 
 
-The general parameters for diabetes prediction include BMI, glucose, age, insulin
+The general parameters for diabetes prediction include BMI, glucose, age, insulin,
+gender, smoking history, hypertension, heart disease
+
+<a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
 
