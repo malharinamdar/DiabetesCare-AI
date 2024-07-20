@@ -58,3 +58,9 @@ complex relationships between the paramters and the output.
 Random forest was used due to its higher accuracy and robustness to overfitting, 
 along with SMOTE(synthetic minority oversampling technique) due to imbalanced dataset.
 
+### Gemini
+Necessary library imports were done which involved the use of importing google.genrativeai
+and the use of GOOGLE_API_KEY.
+Used Gemini-1.5-flash outputting maximum of 4096 tokens at one request.
+
+### Deploy
