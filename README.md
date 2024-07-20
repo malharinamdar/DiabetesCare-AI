@@ -1,7 +1,7 @@
 # DiabetesCare AI 
 Take Charge of Your Health: 
 
-DiabetesCare AI - AI-Enhanced Diabetes Prediction and Gemini-Driven Assistance Companion
+DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistance Companion
 
 
 ### Understanding Diabetes
