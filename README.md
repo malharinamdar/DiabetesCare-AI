@@ -49,3 +49,12 @@ prominent dataset. Issue pertaining to that included:
 Hence the dataset that had important 8 parameters was chosen to train the model containing 100000 samples
 achieving an accuracy of 0.94 (or 94%)
 
+### Model
+
+As a general classification problem, logistic regression seemed like a basic choice.
+Overturning this decision was due to the ability of random forest to handle large data and undertanding 
+complex relationships between the paramters and the output.
+
+Random forest was used due to its higher accuracy and robustness to overfitting, 
+along with SMOTE(synthetic minority oversampling technique) due to imbalanced dataset.
+
