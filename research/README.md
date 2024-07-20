@@ -24,3 +24,4 @@ inputs upon which the ml model would predict the presence of diabetes in the pat
 6. haemoglobin level
 7. bmi
 8. glucose
+<a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
