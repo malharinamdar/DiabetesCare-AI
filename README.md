@@ -4,8 +4,7 @@ We present to you,
 GlykaGuard - Your AI-Powered Diabetes Prediction and Management Companion
 
 GlykaGuard leverages the power of machine learning to predict your risk of developing diabetes.
-But we don't stop there! Our personalized Gemini AI assistant provides ongoing support for
-those identified at risk.
+Our personalized Gemini AI assistant provides ongoing support for those identified at risk.
 
 Glyka - "Glyka" is a common tablet prescribed by doctors for patients tested positive.
 
