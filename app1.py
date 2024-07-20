@@ -18,7 +18,7 @@ update_model = pickle.load(open('/content/good_model.pkl', 'rb'))
 df = pd.read_csv('/Users/malhar.inamdar/Desktop/streamlitapp/diabetes_prediction_dataset.csv')
 
 # Configure Gemini API
-GOOGLE_API_KEY = "AIzaSyCr109nLhfwS7ozcKEsO20PldcmWHoxgYA"
+GOOGLE_API_KEY = "api-key"
 genai.configure(api_key=GOOGLE_API_KEY)
 model = genai.GenerativeModel('gemini-pro')
 
