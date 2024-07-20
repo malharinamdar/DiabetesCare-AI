@@ -1,7 +1,7 @@
-# DiaWise AI 
+# DiabetesCare AI 
 Take Charge of Your Health: 
 
-DiaWise AI - AI-Enhanced Diabetes Prediction and Gemini-Driven Assistance Companion
+DiabetesCare AI - AI-Enhanced Diabetes Prediction and Gemini-Driven Assistance Companion
 
 
 ### Understanding Diabetes
