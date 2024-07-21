@@ -3,6 +3,28 @@ Take Charge of Your Health:
 
 DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistance Companion
 
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+- [Features](#features)
+- [File Structure](#file-structure)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [License](#license)
+
+## Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone [https://github.com/malharinamdar/diabetes.git](https://github.com/malharinamdar/DiabetesCare-AI)
+   cd DiabetesCare-AI
+2. **Install the recquired libraries**
+   ```bash
+   pip install -r requirements.txt
+3. **Download the dataset and pre-trained model**
+   Place the dataset (`diabetes_prediction_dataset.csv`) and the model (`wowmodel.pkl`) in the root directory of the project
+
 
 ### Understanding Diabetes
 
