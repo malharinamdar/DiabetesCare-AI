@@ -8,7 +8,7 @@ import pickle
 import google.generativeai as genai
 
 # Load the model and dataset
-with open('notebook/wowmodel.pkl', 'rb') as file:
+with open('notebook/wowmodel2.pkl', 'rb') as file:
     saved_model = pickle.load(file)
 
 df = pd.read_csv('/Users/malhar.inamdar/Desktop/streamlitapp/diabetes_prediction_dataset.csv')
