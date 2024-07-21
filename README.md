@@ -64,3 +64,9 @@ and the use of GOOGLE_API_KEY.
 Used Gemini-1.5-flash outputting maximum of 4096 tokens at one request.
 
 ### Deploy
+Used Streamlit to deploy the model, due to its quick response time and less complexity involved in the
+hosting process.
+Run the code in your local environment, with necessary packages and libraries installed. Use the .pkl file
+required and run the following command: 
+1. For Windows users: in command prompt, type in:  streamlit run <path to your stremalit .py file>
+2. For Mac users: in terminal , type in: stremalit run <path to your stremalit .py file>
