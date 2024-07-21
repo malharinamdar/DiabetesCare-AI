@@ -36,9 +36,9 @@ DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistanc
    Open your web browser and navigate to `http://localhost:8501`.
 ## File Structure
 DiabetesCare-AI/
-├── finalapp.py
-├── requirements.txt
-├── wowmodel2.pkl
+├── finalapp.py/
+├── requirements.txt/
+├── wowmodel2.pkl/
 └── diabetes_prediction_dataset.csv
 ## Understanding Diabetes
 
