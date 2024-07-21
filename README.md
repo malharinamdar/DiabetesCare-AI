@@ -6,16 +6,16 @@ DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistanc
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
-- [Features](#features)
 - [File Structure](#file-structure)
+- [Understanding Diabetes](#Understanding-Diabetes)
+- [Model Training](#Model-Training)
+- [Web App Components](#Web-App-Components)
 - [Deployment](#deployment)
 - [Contributing](#contributing)
 - [License](#license)
 
 ## Installation
-
 1. **Clone the repository:**
-
    ```bash
    git clone [https://github.com/malharinamdar/diabetes.git](https://github.com/malharinamdar/DiabetesCare-AI)
    cd DiabetesCare-AI
@@ -23,10 +23,24 @@ DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistanc
    ```bash
    pip install -r requirements.txt
 3. **Download the dataset and pre-trained model**
-   Place the dataset (`diabetes_prediction_dataset.csv`) and the model (`wowmodel.pkl`) in the root directory of the project
-
-
-### Understanding Diabetes
+   Place the dataset (`diabetes_prediction_dataset.csv`) and the model (`wowmodel2.pkl`) in the root directory of the project
+4. **Set up environment variables**
+   Create a `.env` file in the root directory and add your Google API key
+   ```bash
+   GOOGLE_API_KEY=your_google_api_key
+## Usage
+1. Run the Streamlit app
+   ```bash
+   streamlit run app.py
+2. Access the app
+   Open your web browser and navigate to `http://localhost:8501`.
+## File Structure
+DiabetesCare-AI/
+├── finalapp.py
+├── requirements.txt
+├── wowmodel2.pkl
+└── diabetes_prediction_dataset.csv
+## Understanding Diabetes
 
 General breakdown of food ingested in our body is broken down as glucose by help from insulin secreted by pancreas.
 
@@ -34,27 +48,46 @@ Two things take place in case of diabetes:
 1. pancreas does not make enough insulin
 2. body's cells resists insulin's effects
 
-#### Type 1 diabetes:
+### Type 1 diabetes:
 Your body attacks insulin-producing cells, so you need external supply of medication (insulin) to survive.
-#### Type 2 diabetes: 
+### Type 2 diabetes: 
 Your body becomes resistant to insulin or doesn't make enough. Often managed with lifestyle changes and/or medication, resulting in 
 high blood glucose.
-
-#### Deciding Parameters
-
-After analysing a couple of research papers of IEEE, it resulted in deciding the following 8 parameters as our 
-inputs upon which the ml model would predict the presence of diabetes in the patients:
-
+## Model Training 
 <a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
 
-1. gender (male or female)
-2. age
-3. hypertension
-4. heart disease
-5. smoking history
-6. haemoglobin level
-7. bmi
-8. glucose
+
+
+## Web App Components
+1. User Authentication
+    Users can log in using their name.
+    The session state is used to manage user accounts and their prediction history
+2. Data Input
+    The sidebar allows users to input various health indicators such as gender, age,
+    hypertension, heart disease, smoking history, height, weight, HbA1c level, and blood glucose level.
+   
+    BMI is calculated automatically based on the height and weight inputs.
+3.  Prediction
+    The `predict_button` triggers the prediction function which uses the pre-trained model to predict the likelihood of diabetes.
+    The prediction result is displayed to the user.
+    
+    The pre-trained achieving an accuracy of `94%` on a `100000` large dataset was loaded as a `.pkl` file
+    into the `streamlit` code.
+4. Visualisation
+   `Seaborn` and `Matplotlib` enables the users to examine the relationship between the features.
+   Multiple graphs integrated to provide a comprehensive overview of the `input data` and the `diabetes_prediction_dataset.csv`.
+
+   If diabetic the plot on the graph is a unique circle with a shade of red, else the circle plotted is dark shade of blue.
+5. Suggestions
+   Personalised lifestyle and dietary suggestions, including helpful resources of hospitals in India are provided
+   by the integrtaion of `gemini-1.5-flash` LLM model.
+
+   Sutable `safety_settings` and `temperature` was configured along with the **nucleus sampling** of the
+   `top_k` and `top_p` temperature
+
+   Kept maximum output of `4096` tokens at a time for the assistance.
+     
+
 
 
 
