@@ -32,12 +32,13 @@ DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistanc
    `streamlit run finalapp.py`
    
 ## Usage
-1. Running in your local environment involves steps with necessary packages and libraries installed. Use the `.pkl` file
+1. Website has been hosted on the internet, refer to [Deployment](#Deployment) section.
+2. Running in your local environment involves steps with necessary packages and libraries installed. Use the `.pkl` file
    required and run the following command: 
    1. For `Windows` users: in `command prompt`, type in:  `streamlit run <path to your stremalit .py file>`
    2. For `Mac` users: in `terminal` , type in: `stremalit run <path to your stremalit .py file>`
       
-2. Access the app
+3. Access the app
    
    Open your web browser and navigate to `http://localhost:8501`.
    
