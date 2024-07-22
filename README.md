@@ -1,7 +1,7 @@
 # DiabetesCare AI 
 Take Charge of Your Health: 
 
-DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistance Companion
+DiabetesCare AI - an AI Enhanced Diabetes Prediction and Gemini Driven Assistance Companion along with a Q & A Chatbot
 
 ## Table of Contents
 - [Installation](#installation)
@@ -117,6 +117,10 @@ Implemented `SMOTE` (Synthetic Minority Oversampling Technique) to address the i
    `top_k` and `top_p` temperature
 
    Kept maximum output of `4096` tokens at a time for the assistance.
+6. **Q & A Chatbot**
+   The website hosts a Q & A Chatbot to answer queries arising by patients. The history of queries entered by the user are saved and
+   displayed in the end.
+   The chatbot leverages the use of `gemini-1.5-flash` LLM Model.
      
 ## Deployment
 - Deploying on Streamlit Community Cloud
