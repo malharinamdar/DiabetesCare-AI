@@ -62,6 +62,7 @@ Your body becomes resistant to insulin or doesn't make enough. Often managed wit
 high blood glucose.
 
 ## Model Training 
+Referred to the mentioned research paper while trying to decide on the best fit for paramters and selecting suitable model.
 <a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
 
 
