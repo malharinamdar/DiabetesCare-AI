@@ -65,9 +65,29 @@ high blood glucose.
 Referred to the mentioned research paper while trying to decide on the best fit for paramters and selecting suitable model.
 <a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
 
+### Why Random Forest?
+1. **Handling of Large Data:** Efficient with high-dimensional datasets.
+2. **Robustness to Overfitting:** Reduces overfitting by averaging the predictions of multiple decision trees.
+3. **Handling Mixed Data Types:** Manages both numerical and categorical features smoothly.
+4. **Feature Importance:** Provides estimates of feature importance.
+5. **Non-linearity:** Captures complex and non-linear relationships in medical data.
+   
+### Data Preprocessing and Exploratory Data Analysis (EDA)
+Conducted comprehensive steps and functions to address the dataset issues, like containing duplicate rows, 
+values and missing parameter values.
 
+### Imbalanced datset 
+Implemented `SMOTE` (Synthetic Minority Oversampling Technique) to address the imbalanced dataset
 
-
+### Preprocessing, Model Building and Hyperparameter Tuning
+- Conducted one-hot encoding categorical features
+- Implemented `Random Forest` with `GridSearchCV` for Hyperparameter Tuning
+  
+### Results:
+- Selected best parameters after cross-validation.
+- Evaluated model performance on the test set.
+- Achieved high accuracy `0.94` on the test set.
+  
 ## Web App Components
 1. **User Authentication**
     Users can log in using their name.
