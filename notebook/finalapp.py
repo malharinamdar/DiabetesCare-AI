@@ -7,10 +7,10 @@ import pickle
 import google.generativeai as genai
 
 # Load the model and dataset
-with open('/Users/malhar.inamdar/Desktop/streamlitapp/wowmodel2.pkl', 'rb') as file:
+with open('notebook/wowmodel2.pkl', 'rb') as file:
     saved_model = pickle.load(file)
 
-df = pd.read_csv('/Users/malhar.inamdar/Desktop/streamlitapp/diabetes_prediction_dataset.csv')
+df = pd.read_csv('notebook/diabetes_prediction_dataset.csv')
 columns = ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
 
 # Set up GenAi model and API key
