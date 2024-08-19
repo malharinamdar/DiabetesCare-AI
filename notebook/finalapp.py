@@ -122,9 +122,6 @@ if predict_button:
 
         user_result = dia_predict(user_data)
 
-        # Visualization section
-        st.title('Visualized Patient Report')
-
         # COLOR FUNCTION
         color = 'blue' if user_result[0] == 0 else 'darkred'
 
@@ -149,6 +146,9 @@ if predict_button:
         suggestion = generate_suggestion(user_data, user_result)
         st.subheader('Suggestions:')
         st.write(suggestion)
+
+         # Visualization section
+        st.title('Visualized Patient Report')
 
         # Age vs Glucose
         with st.expander('Age vs Glucose'):
