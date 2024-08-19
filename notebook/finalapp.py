@@ -128,6 +128,28 @@ if predict_button:
         # COLOR FUNCTION
         color = 'blue' if user_result[0] == 0 else 'darkred'
 
+         # Output result
+        st.subheader('Your Report:')
+        output = 'You are not Diabetic' if user_result[0] == 0 else 'You are Diabetic'
+        st.markdown(f"<h1 style='color: {'green' if user_result[0] == 0 else 'red'};'>{output}</h1>", unsafe_allow_html=True)
+
+        # Suggestions from Gemini API
+        def generate_suggestion(report_data, user_result):
+            input_text = ", ".join([f"{col}: {val}" for col, val in zip(columns, report_data.iloc[0])])
+            if user_result[0] == 0:
+                return "You are not diabetic but still keep a healthy lifestyle to prevent future diagnosis."
+            else:
+                input_string = f"Give me personalised lifestyle and dietary suggestions for a patient with diabetes as per the data given: {input_text}, also give me helpline numbers and valuable internet resources about hospitals with good diabetic care in india"
+                try:
+                    response = model.generate_content(input_string)  # Use the generate_content method
+                    return response.text
+                except Exception as e:
+                    return f"Error generating suggestion: {str(e)}"
+
+        suggestion = generate_suggestion(user_data, user_result)
+        st.subheader('Suggestions:')
+        st.write(suggestion)
+
         # Age vs Glucose
         with st.expander('Age vs Glucose'):
             st.header('Age vs Glucose')
@@ -200,27 +222,7 @@ if predict_button:
             st.pyplot(fig_dpf)
             st.write("This graph shows the relationship between age and hypertension. Each point represents a patient's age and hypertension status, with colors indicating the presence of diabetes. The highlighted point is the input patient's data.")
 
-        # Output result
-        st.subheader('Your Report:')
-        output = 'You are not Diabetic' if user_result[0] == 0 else 'You are Diabetic'
-        st.markdown(f"<h1 style='color: {'green' if user_result[0] == 0 else 'red'};'>{output}</h1>", unsafe_allow_html=True)
-
-        # Suggestions from Gemini API
-        def generate_suggestion(report_data, user_result):
-            input_text = ", ".join([f"{col}: {val}" for col, val in zip(columns, report_data.iloc[0])])
-            if user_result[0] == 0:
-                return "You are not diabetic but still keep a healthy lifestyle to prevent future diagnosis."
-            else:
-                input_string = f"Give me personalised lifestyle and dietary suggestions for a patient with diabetes as per the data given: {input_text}, also give me helpline numbers and valuable internet resources about hospitals with good diabetic care in india"
-                try:
-                    response = model.generate_content(input_string)  # Use the generate_content method
-                    return response.text
-                except Exception as e:
-                    return f"Error generating suggestion: {str(e)}"
-
-        suggestion = generate_suggestion(user_data, user_result)
-        st.subheader('Suggestions:')
-        st.write(suggestion)
+       
 
         # Store history
         if 'history' not in st.session_state.user_accounts[st.session_state.current_user]:
