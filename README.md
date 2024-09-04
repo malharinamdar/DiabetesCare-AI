@@ -1,7 +1,7 @@
 # DiabetesCare AI 
 Take Charge of Your Health.
 
-DiabetesCare AI - an AI Enhanced Diabetes Prediction utilising Gemini along with a Q & A Chatbot
+DiabetesCare AI - Gemini Enhanced Diabetes Prediction along with a Q & A Chatbot
 
 ## Table of Contents
 - [Installation](#installation)
