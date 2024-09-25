@@ -1,5 +1,5 @@
 # DiabetesCare-AI 
-DiabetesCare-AI - Gemini based diabetes prediction along with a Q & A Chatbot
+diabetes prediction along with a Q & A Chatbot
 
 ## Table of Contents
 - [Installation](#installation)
