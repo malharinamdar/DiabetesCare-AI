@@ -1,6 +1,4 @@
 # DiabetesCare-AI 
-Take Charge of Your Health.
-
 DiabetesCare-AI - Gemini based diabetes prediction along with a Q & A Chatbot
 
 ## Table of Contents
