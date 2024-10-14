@@ -36,7 +36,6 @@ model = genai.GenerativeModel('gemini-1.5-flash', safety_settings=safety_setting
 # Title and description for landing page
 st.title('Welcome to DiabetesCare AI')
 st.write("""
-      AI Enhanced Diabetes Prediction and Gemini Driven Assistance Companion
 
       Take Charge of Your Health.
     """)
@@ -79,7 +78,7 @@ st.write("""
 # Footer with disclaimer or additional info
 st.write("""
     --- 
-    Developed by Team Spam Bytes. Powered by Streamlit, Plotly, Scikit-learn, and Google Gemini.
+     Powered by Streamlit, Plotly, Scikit-learn, and Google Gemini.
     """)
 
 # Data input fields
