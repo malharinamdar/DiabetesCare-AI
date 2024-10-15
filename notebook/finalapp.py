@@ -278,7 +278,6 @@ if submit and input_text:
         else:
             st.markdown(f'<div class="bot-msg"><b>{role}:</b> {text}</div>', unsafe_allow_html=True)
 
-# Add CSS styles
 st.markdown("""
     <style>
     .user-msg {
