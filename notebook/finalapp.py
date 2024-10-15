@@ -14,7 +14,7 @@ df = pd.read_csv('notebook/diabetes_prediction_dataset.csv')
 columns = ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
 
 # Set up GenAi model and API key
-API_KEY = st.secrets["AIzaSyCr109nLhfwS7ozcKEsO20PldcmWHoxgYA"]
+API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=API_KEY)
 
 MODEL_CONFIG = {
