@@ -9,18 +9,6 @@ diabetes prediction along with a Q & A Chatbot
 - `wowmodel2.pkl`: The pre-trained machine learning model.
 - `diabetes_prediction_dataset.csv`: The dataset used for predictions and visualizations.
    
-## Understanding Diabetes
-General breakdown of food ingested in our body is broken down as glucose by help from insulin secreted by pancreas.
-
-Two things take place in case of diabetes:
-- pancreas does not make enough insulin
-- body's cells resists insulin's effects
-
-### Type 1 diabetes:
-Your body attacks insulin-producing cells, so you need external supply of medication (insulin) to survive.
-### Type 2 diabetes: 
-Your body becomes resistant to insulin or doesn't make enough. Often managed with lifestyle changes and/or medication, resulting in 
-high blood glucose.
 
 ### Preprocessing, Model Building and Hyperparameter Tuning
 - Conducted one-hot encoding categorical features
