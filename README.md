@@ -1,5 +1,5 @@
 # DiabetesCare-AI 
-diabetes prediction along with a Q & A Chatbot
+personalised diabetes prediction along with a Q & A Chatbot
 
    
 ## File Structure
