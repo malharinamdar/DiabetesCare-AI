@@ -1,44 +1,6 @@
 # DiabetesCare-AI 
 diabetes prediction along with a Q & A Chatbot
 
-## Table of Contents
-- [Installation](#installation)
-- [Usage](#usage)
-- [File Structure](#file-structure)
-- [Understanding Diabetes](#Understanding-Diabetes)
-- [Model Training](#Model-Training)
-- [Web App Components](#Web-App-Components)
-- [Deployment](#deployment)
-
-## Installation
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/malharinamdar/DiabetesCare-AI
-   cd DiabetesCare-AI
-2. **Install the recquired libraries**
-   ```bash
-   pip install -r requirements.txt
-   
-3. **Download the dataset and pre-trained model**
-   Place the dataset (`diabetes_prediction_dataset.csv`) and the model (`wowmodel2.pkl`) in the root directory of the project
-   
-5. **Set up environment variables**
-   Create a `.env` file in the root directory and add your Google API key
-   ```bash
-   GOOGLE_API_KEY=your_google_api_key
-6. **Run the App**
-   `streamlit run finalapp.py`
-   
-## Usage
-1. Website has been hosted on the internet, refer to [Deployment](#Deployment) section.
-2. Running in your local environment involves steps with necessary packages and libraries installed. Use the `.pkl` file
-   required and run the following command: 
-   1. For `Windows` users: in `command prompt`, type in:  `streamlit run <path to your stremalit .py file>`
-   2. For `Mac` users: in `terminal` , type in: `stremalit run <path to your stremalit .py file>`
-      
-3. Access the app
-   
-   Open your web browser and navigate to `http://localhost:8501`.
    
 ## File Structure
 
@@ -59,24 +21,6 @@ Your body attacks insulin-producing cells, so you need external supply of medica
 ### Type 2 diabetes: 
 Your body becomes resistant to insulin or doesn't make enough. Often managed with lifestyle changes and/or medication, resulting in 
 high blood glucose.
-
-## Model Training 
-Referred to the mentioned research paper while trying to decide on the best fit for paramters and selecting suitable model.
-<a href="https://ieeexplore.ieee.org/document/10128216">research paper</a>
-
-### Why Random Forest?
-1. **Handling of Large Data:** Efficient with high-dimensional datasets.
-2. **Robustness to Overfitting:** Reduces overfitting by averaging the predictions of multiple decision trees.
-3. **Handling Mixed Data Types:** Manages both numerical and categorical features smoothly.
-4. **Feature Importance:** Provides estimates of feature importance.
-5. **Non-linearity:** Captures complex and non-linear relationships in medical data.
-   
-### Data Preprocessing and Exploratory Data Analysis (EDA)
-Conducted comprehensive steps and functions to address the dataset issues, like containing duplicate rows, 
-values and missing parameter values.
-
-### Imbalanced datset 
-Implemented `SMOTE` (Synthetic Minority Oversampling Technique) to address the imbalanced dataset
 
 ### Preprocessing, Model Building and Hyperparameter Tuning
 - Conducted one-hot encoding categorical features
@@ -126,7 +70,3 @@ Implemented `SMOTE` (Synthetic Minority Oversampling Technique) to address the i
    displayed in the end.
    The chatbot leverages the use of `gemini-1.5-flash` LLM Model.
      
-## Deployment
-- Deploying on Streamlit Community Cloud
-- Website now live at <a href="https://diabetescare-ai-tech.streamlit.app/">DiabetesCare-AI</a>
-  
