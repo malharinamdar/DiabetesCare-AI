@@ -78,7 +78,7 @@ st.write("""
 # Footer with disclaimer or additional info
 st.write("""
     --- 
-     Powered by Streamlit, Plotly, Scikit-learn, and Google Gemini.
+     Developed by Malhar Inamdar.
     """)
 
 # Data input fields
