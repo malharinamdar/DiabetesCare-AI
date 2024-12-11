@@ -6,14 +6,14 @@ import numpy as np
 import pickle
 import google.generativeai as genai
 
-# Load the model and dataset
+# Loading the model and dataset
 with open('notebook/wowmodel2.pkl', 'rb') as file:
     saved_model = pickle.load(file)
 
 df = pd.read_csv('notebook/diabetes_prediction_dataset.csv')
 columns = ['gender', 'age', 'hypertension', 'heart_disease', 'smoking_history', 'bmi', 'HbA1c_level', 'blood_glucose_level']
 
-# Set up GenAi model and API key
+#  API key
 API_KEY = st.secrets["API_KEY"]
 genai.configure(api_key=API_KEY)
 
@@ -40,7 +40,7 @@ st.write("""
       Take Charge of Your Health.
     """)
 
-# Sidebar for user login and data input
+# user login and data input
 with st.sidebar:
     st.header('Patient Data')
     # User login and account management
@@ -67,7 +67,6 @@ with st.sidebar:
             st.session_state.current_user = None
             st.success('Exited successfully')
 
-# Add some explanation or instructions
 st.write("""
     ### Instructions
     1. Enter your name to get started.
@@ -75,7 +74,6 @@ st.write("""
     3. Click 'Predict' to see the prediction and visualized report.
     """)
 
-# Footer with disclaimer or additional info
 st.write("""
     --- 
      Developed by Malhar Inamdar.
@@ -95,7 +93,7 @@ blood_glucose_level = st.slider('Blood Glucose Level', 75, 310, 88)
 
 predict_button = st.button('Predict')
 
-# Function for user input
+#  user input
 def user_report():
     return pd.DataFrame({
         'gender': [gender],
@@ -108,7 +106,6 @@ def user_report():
         'blood_glucose_level': [blood_glucose_level]
     })
 
-# Execute prediction only when button is pressed
 if predict_button:
     if st.session_state.current_user:
         user_data = user_report()
@@ -121,15 +118,13 @@ if predict_button:
 
         user_result = dia_predict(user_data)
 
-        # COLOR FUNCTION
         color = 'blue' if user_result[0] == 0 else 'darkred'
 
-         # Output result
         st.subheader('Your Report:')
         output = 'You are not Diabetic' if user_result[0] == 0 else 'You are Diabetic'
         st.markdown(f"<h1 style='color: {'green' if user_result[0] == 0 else 'red'};'>{output}</h1>", unsafe_allow_html=True)
 
-        # Suggestions from Gemini API
+        # Suggestions from Gemini 
         def generate_suggestion(report_data, user_result):
             input_text = ", ".join([f"{col}: {val}" for col, val in zip(columns, report_data.iloc[0])])
             if user_result[0] == 0:
