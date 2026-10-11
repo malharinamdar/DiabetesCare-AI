@@ -2,8 +2,6 @@
 
 Type 2 diabetes risk screening, with an explanation of what drives the estimate and personal guidance.
 
-**Live → [diabetescare-ai.vercel.app](https://diabetescare-ai.vercel.app)**
-
 ![DiabetesCare AI](docs/home.webp)
 
 ## What it does
