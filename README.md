@@ -1,60 +1,46 @@
-# DiabetesCare-AI 
-personalised diabetes prediction along with a Q & A Chatbot
+# DiabetesCare AI
 
-   
-## File Structure
+Type 2 diabetes risk screening, with an explanation of what drives the estimate and personal guidance.
 
-- `finalapp.py`: The main script for running the Streamlit web app.
-- `requirements.txt`: Lists all the dependencies required for the project.
-- `wowmodel2.pkl`: The pre-trained machine learning model.
-- `diabetes_prediction_dataset.csv`: The dataset used for predictions and visualizations.
-   
+**Live → [diabetescare-ai.vercel.app](https://diabetescare-ai.vercel.app)**
 
-### Preprocessing, Model Building and Hyperparameter Tuning
-- Conducted one-hot encoding categorical features
-- Implemented `Random Forest` with `GridSearchCV` for Hyperparameter Tuning
-  
-### Results:
-- Selected best parameters after cross-validation.
-- Evaluated model performance on the test set.
-- Achieved high accuracy `0.94` on the test set.
-  
-## Web App Components
-1. **User Authentication**
-   
-    Users can log in using their name.
-    The session state is used to manage user accounts and their prediction history
-2. **Data Input**
-   
-    The sidebar allows users to input various health indicators such as `gender`, `age`,
-    `hypertension`, `heart disease`, `smoking history`, `height`, `weight`, `HbA1c level`, and `blood glucose level`.
-   
-    BMI is calculated automatically based on the height and weight inputs.
-3.  **Prediction**
-   
-    The `predict_button` triggers the prediction function which uses the pre-trained model to predict the likelihood of diabetes.
-    The prediction result is displayed to the user.
-    
-    The pre-trained achieving an accuracy of `94%` on a `100000` large dataset was loaded as a `.pkl` file
-    into the `streamlit` code.
-4. **Visualisation**
-   
-   `Seaborn` and `Matplotlib` enables the users to examine the relationship between the features.
-   Multiple graphs integrated to provide a comprehensive overview of the `input data` and the `diabetes_prediction_dataset.csv`.
+![DiabetesCare AI](docs/home.webp)
 
-   If diabetic the plot on the graph is a unique circle with a shade of `red`, else the circle plotted is dark shade of `blue`.
-5. **Suggestions**
-    
-   Personalised lifestyle and dietary suggestions, including helpful resources of hospitals in India are provided
-   by the integrtaion of `gemini-1.5-flash` LLM model.
+## What it does
 
-   Sutable `safety_settings` and `temperature` was configured along with the **nucleus sampling** of the
-   `top_k` and `top_p` temperature
+- **Risk estimate.** Eight routine measurements go in. A random forest returns an estimated probability and a risk band.
+- **What moved the estimate.** Per-answer attributions computed from the forest's decision paths.
+- **Where you sit.** Your HbA1c, glucose, BMI and age plotted against 96,128 patient records.
+- **Guidance and assistant.** Personal food, activity and testing guidance, plus a diabetes Q&A assistant (GPT-4.1 mini).
+- **History.** Past assessments are saved in the browser, with a trend chart.
 
-   Kept maximum output of `4096` tokens at a time for the assistance.
-6. **Q & A Chatbot**
-    
-   The website hosts a Q & A Chatbot to answer queries arising by patients. The history of queries entered by the user are saved and
-   displayed in the end.
-   The chatbot leverages the use of `gemini-1.5-flash` LLM Model.
-     
+<p>
+  <img src="docs/assessment.webp" width="40%" alt="Risk assessment" />
+  <img src="docs/guidance.webp" width="40%" alt="Personal guidance" />
+</p>
+
+## Model
+
+Trained on the [Diabetes Prediction dataset](https://www.kaggle.com/datasets/iammustafatz/diabetes-prediction-dataset) after removing duplicates. SMOTE plus under-sampling handle the class imbalance, and the model is a 100-tree random forest. Scores are on a stratified 20% held-out set:
+
+| Accuracy | ROC AUC | Recall | Precision |
+| --- | --- | --- | --- |
+| 94.3% | 97.4% | 81.3% | 64.1% |
+
+## Stack
+
+Next.js · TypeScript · Tailwind CSS · scikit-learn · imbalanced-learn · OpenAI API · Vercel
+
+## Run locally
+
+```bash
+npm install
+echo "OPENAI_API_KEY=sk-..." > .env.local
+npm run dev
+```
+
+To retrain: `pip install -r ml/requirements.txt && python ml/train.py`
+
+---
+
+The original Streamlit version is on the [`legacy-streamlit`](https://github.com/malharinamdar/DiabetesCare-AI/tree/legacy-streamlit) branch.

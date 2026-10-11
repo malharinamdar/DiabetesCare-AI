@@ -1,0 +1,4 @@
+.env*
+ml/
+.next
+node_modules
